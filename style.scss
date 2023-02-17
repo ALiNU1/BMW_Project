@@ -27,9 +27,9 @@ body {
     font-family: "Montserrat";
 }
 
-li{
-  list-style: none;
-}
+// li{
+//   list-style: none;
+// }
 
 a{
   text-decoration: none;
@@ -37,6 +37,12 @@ a{
 
 $White: #fafafa;  
 $Black: #252525;
+
+@mixin colors($c, $bgc, $bc) {
+  color: $c;
+  background-color: $bgc;
+  border: 1px solid $bc;
+}
 
 .header{
     background-color: $Black;
@@ -76,65 +82,6 @@ $Black: #252525;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-      max-width: 540px;
-    }
-    .mobile-btn {
-      display: flex;
-      align-items: center;
-      position: relative;
-      z-index: 5;
-      width: 70px;
-      height: 50px;
-      cursor: pointer;
-    }
-    .header__logo {
-      z-index: 5;
-    }
-    .mobile-btn span,
-    .mobile-btn span::before,
-    .mobile-btn span::after {
-      content: "";
-      display: block;
-      background-color: white;
-      height: 5px;
-      position: absolute;
-      width: 100%;
-    }
-    .mobile-btn span::after {
-      bottom: -15px;
-    }
-    .mobile-btn span::before {
-      top: -15px;
-    }
-    .header::before {
-      content: "";
-      background-color: $Black;
-      width: 100%;
-      height: 100%;
-      z-index: 4;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .header__menu {
-      position: absolute;
-      left: 0;
-      background-color: $Black;
-      top: 0px;
-      width: 100%;
-      padding: 15px 0;
-      justify-content: center;
-      z-index: 1;
-      transition: 0.7s;
-    }
-    .header__menu-show {
-      z-index: 6;
-      top: 90px;
-      border-top: 1px solid $White;
-    }
-  }
 
 .image{
     margin-top: 100px;
@@ -156,5 +103,141 @@ $Black: #252525;
       height: 250px;
       object-fit: cover;
     }
+  }
+}
+
+
+.contact{
+  margin-top: 100px;
+  &__title{
+      margin-bottom: 50px;
+  }
+  &__list{
+      padding-left: 15px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      &-item{
+          a{
+              text-decoration: none;
+              color: $Black;
+          }
+      }
+  }
+
+  &__form{
+      border: 1px solid $Black;
+      border-radius: 20px;
+      padding: 20px;
+      &-input{
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 15px;
+          border-radius: 10px;
+          border: 1px solid $Black;
+          outline: none;
+      }
+      &-btn{
+          @include colors($Black, transparent, $Black);
+          padding: 5px 15px;
+          border-radius: 5px;
+          font-size: 18px;
+          cursor: pointer;
+          transition: 0.5s;
+          &:hover{
+              @include colors($White, $Black, $Black);
+          }
+      }
+  }
+}
+
+footer {
+  background-color: $Black;
+  padding: 50px 0;
+  margin-top: 50px;
+
+  p {
+      color: $White;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .col-6{
+    width: 100%;
+  }
+  .contact__form{
+    margin-top: 50px;
+  }
+  .mobile-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .header__logo {
+    z-index: 5;
+  }
+  .mobile-btn span,
+  .mobile-btn span::before,
+  .mobile-btn span::after {
+    content: "";
+    display: block;
+    background-color: white;
+    height: 5px;
+    position: absolute;
+    width: 100%;
+  }
+  .mobile-btn span::after {
+    bottom: -15px;
+  }
+  .mobile-btn span::before {
+    top: -15px;
+  }
+  .header::before {
+    content: "";
+    background-color: $Black;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .header__menu {
+    position: absolute;
+    left: 0;
+    background-color: $Black;
+    top: 0px;
+    width: 100%;
+    padding: 15px 0;
+    justify-content: center;
+    z-index: 1;
+    transition: 0.7s;
+  }
+  .header__menu-show {
+    z-index: 6;
+    top: 90px;
+    border-top: 1px solid $White;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  .header__menu {
+    column-gap: 20px;
+  }
+  .image{
+    margin-top: 60px;
+    height: 300px;
   }
 }

@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./libs/fontawesome/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
     <link rel="stylesheet" href="./libs/carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./libs/carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="style.css">
@@ -105,22 +106,42 @@
 
         </section>
         <section class="contact">
-            <div class="comtainer">
+            <div class="container">
                 <h2 class="contact__title">Contact</h2>
                 <div class="row">
                     <div class="col-6">
                         <ul class="contact__list">
-                            <li class="caontact__list-item"><a href="tel: +996220066578"><i class="fa-solid fa-phone"></i>+996220066578</a></li>
-                            <li class="caontact__list-item"><a href="mailto: uwu1343@gmail.com">uwu1343@gmail.com</a></li>
-                            <li class="caontact__list-item"><a href=""></a></li>
-                            <li class="caontact__list-item"><a href=""></a></li>
+                            <li class="contact__list-item"><a href="tel: +996220066578"><i class="fa-solid fa-phone"></i> +996220066578</a></li>
+                            <li class="contact__list-item"><a href="mailto: uwu1343@gmail.com"> <i class="fa-solid fa-envelope"></i> uwu1343@gmail.com</a></li>
+                            <li class="contact__list-item"><a target="_blank" href="https://www.instagram.com/itsaallicho/"><i class="fa-brands fa-instagram"></i> @itsaallicho</a></li>
                         </ul>
                     </div>
+                    <div class="col-6">
+                        <form class="contact__form">
+                            <label>
+                                <input placeholder="First name" type="text" class="contact__form-input">
+                            </label>
+                            <label>
+                                <input placeholder="Last name" type="text" class="contact__form-input">
+                            </label>
+                            <label>
+                                <input placeholder="Number" type="tel" class="contact__form-input">
+                            </label>
+
+                            <button class="contact__form-btn">submit</button>
+                        </form>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
     </main>
+    
+    <footer>
+        <p>© Created by itsaallicho</p>
+    </footer>
 
+    <script src="./libs/fontawesome/all.min.js"></script>
     <script src="./libs/jquery/jquery.js"></script>
     <script src="./libs/carousel/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
