@@ -30,4 +30,4 @@ const burgerFunc = (menuClassName, showClassName) => {
 
 btn.addEventListener("click", () => {
   burgerFunc("header__menu", "header__menu-show ");
-});
+});  
